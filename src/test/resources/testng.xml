@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Suite" parallel="tests" thread-count="2">
+
+    <test name="E2E Tests">
+        <classes>
+            <class name="tests.UI.ContactUsTest"/>
+            <class name="tests.UI.LoginInvalidTest"/>
+            <class name="tests.UI.LoginValidTest"/>
+            <class name="tests.UI.LogoutTest"/>
+            <class name="tests.UI.RegisterUserTest"/>
+            <class name="tests.UI.ScrollTestDown"/>
+            <class name="tests.UI.ScrollTestUp"/>
+            <class name="tests.UI.SearchProductTest"/>
+            <class name="tests.UI.VerifyProductQuantity"/>
+            <class name="tests.UI.VerifyTestCases"/>
+        </classes>
+    </test>
+
+
+</suite>
