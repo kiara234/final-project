@@ -1,28 +1,25 @@
 package tests.UI;
 
+import base.BaseTest;
 import com.testing.TestAutomation.steps.lika.HomePageSteps;
 import com.testing.TestAutomation.steps.lika.LoginPageSteps;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 @Epic("UI Automation Tests")
 @Feature("Login Functionality")
-public class LoginInvalidTest {
+public class LoginInvalidTest extends BaseTest {
 
-    WebDriver driver;
     LoginPageSteps loginPageSteps;
     HomePageSteps homePageSteps;
 
     @BeforeClass
-    @Description("Setup ChromeDriver and initialize page steps")
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://automationexercise.com");
+    @Description("Initialize page step classes")
+    public void initPages() {
         homePageSteps = new HomePageSteps(driver);
         loginPageSteps = new LoginPageSteps(driver);
     }

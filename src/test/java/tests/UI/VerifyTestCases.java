@@ -1,47 +1,47 @@
 package tests.UI;
 
+import base.BaseTest;
 import com.testing.TestAutomation.pages.lika.HomePage;
 import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 @Epic("UI Automation Tests")
 @Feature("Test Cases Page Verification")
-public class VerifyTestCases {
-    WebDriver driver;
+public class VerifyTestCases extends BaseTest {
+
     HomePage homePage;
-    WebDriverWait wait;
     HomePageSteps homePageSteps;
+    WebDriverWait wait;
 
     @BeforeClass
-    @Description("Setup ChromeDriver, initialize page steps, wait, and homepage")
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    @Description("Initialize page steps and wait")
+    public void initPages() {
         homePageSteps = new HomePageSteps(driver);
         homePage = new HomePage();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test(description = "Verify navigation to Test Cases page from homepage")
     @Description("Navigate to the homepage, click on the Test Cases link, and verify the URL of the Test Cases page")
     public void verifyAllProductsAndDetail() {
+
+        driver.get("https://automationexercise.com");
+
         homePageSteps
                 .navigateToHomePage()
                 .navigateToTestCases();
-        Assert.assertTrue(driver.getCurrentUrl().equals("https://automationexercise.com/test_cases"));
-    }
 
-    @AfterClass
-    @Description("Close the browser after test execution")
-    public void teardown() {
-        driver.quit();
+        Assert.assertEquals(
+                driver.getCurrentUrl(),
+                "https://automationexercise.com/test_cases"
+        );
     }
 }
