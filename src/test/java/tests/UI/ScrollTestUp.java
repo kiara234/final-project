@@ -1,8 +1,8 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import com.testing.TestAutomation.steps.lika.LoginPageSteps;
+import com.testing.TestAutomation.steps.HomePageSteps;
+import com.testing.TestAutomation.steps.LoginPageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -43,20 +43,15 @@ public class ScrollTestUp extends BaseTest {
         );
     }
 
-    @Test(priority = 2, description = "Scroll down to the Subscription section and verify the text",
-            dependsOnMethods = "loginWithValidCredentials")
+    @Test(priority = 2, description = "Scroll down to the Subscription section and verify the text", dependsOnMethods = "loginWithValidCredentials")
     @Description("Navigate to homepage, scroll down to the subscription section, and assert that the subscription text is visible and correct")
     public void scrollToSubscription() {
         homePageSteps
                 .navigateToHomePage()
-                .scrollToSubscriptionAndAssertText(
-                        "Get the most recent updates from\n" +
-                                "our site and be updated your self..."
-                );
+                .scrollToSubscriptionAndAssertText("Get the most recent updates from\n" + "our site and be updated your self...");
     }
 
-    @Test(priority = 3, description = "Scroll back to top and verify username is still visible",
-            dependsOnMethods = "scrollToSubscription")
+    @Test(priority = 3, description = "Scroll back to top and verify username is still visible", dependsOnMethods = "scrollToSubscription")
     @Description("Scroll back to the top of the page and verify that the logged-in username is displayed in the navigation bar")
     public void scrollUp() {
         homePageSteps.scrollToTop();

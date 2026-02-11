@@ -1,5 +1,6 @@
-package tests.API.mari;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class VerifyLoginAPITests {
+public class VerifyLoginAPITests   extends ApiBaseTest  {
 
     private final String BASE_URL = "https://automationexercise.com/api/verifyLogin";
 

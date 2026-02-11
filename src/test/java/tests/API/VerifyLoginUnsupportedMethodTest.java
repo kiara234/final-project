@@ -1,14 +1,15 @@
-package tests.API.mari;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
-public class VerifyLoginUnsupportedMethodTest {
+public class VerifyLoginUnsupportedMethodTest extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {

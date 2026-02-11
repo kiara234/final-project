@@ -1,16 +1,18 @@
-package tests.API.lizi;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.is;
 
-public class BrandsListNegativeTest {
+public class BrandsListNegativeTest extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {

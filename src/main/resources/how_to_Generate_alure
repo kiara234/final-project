@@ -1,0 +1,3 @@
+Run the test suites full_coverage_API.xml and full_coverage_UI.xml. After the execution finishes, generate the Allure report with the command allure generate target/allure-results -o target/allure-report --clean.
+Once the report is generated, open it by either opening the index.
+html file in the target/allure-report directory or running allure open target/allure-report.

@@ -1,6 +1,6 @@
-package com.testing.TestAutomation.steps.lika;
+package com.testing.TestAutomation.steps;
 
-import com.testing.TestAutomation.pages.lika.HomePage;
+import com.testing.TestAutomation.pages.HomePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

@@ -1,8 +1,8 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import com.testing.TestAutomation.steps.lizi.ContactPageSteps;
+import com.testing.TestAutomation.steps.HomePageSteps;
+import com.testing.TestAutomation.steps.ContactPageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -31,9 +31,6 @@ public class ScrollTestDown extends BaseTest {
 
         homePageSteps
                 .navigateToHomePage()
-                .scrollToSubscriptionAndAssertText(
-                        "Get the most recent updates from\n" +
-                                "our site and be updated your self..."
-                );
+                .scrollToSubscriptionAndAssertText("Get the most recent updates from\n" + "our site and be updated your self...");
     }
 }

@@ -1,9 +1,9 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.pages.lika.HomePage;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import com.testing.TestAutomation.steps.mari.ProductsPageSteps;
+import com.testing.TestAutomation.pages.HomePage;
+import com.testing.TestAutomation.steps.HomePageSteps;
+import com.testing.TestAutomation.steps.ProductsPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

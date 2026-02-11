@@ -1,12 +1,13 @@
-package tests.API.lika;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ProductsListTestNG {
+public class ProductsListTestNG  extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {
@@ -23,7 +24,6 @@ public class ProductsListTestNG {
                         .when()
                         .post("/api/productsList");
 
-        // Print response body
         System.out.println("Response Body: " + response.asString());
 
         int responseCode = response.jsonPath().getInt("responseCode");

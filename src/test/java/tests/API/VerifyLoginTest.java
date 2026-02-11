@@ -1,5 +1,6 @@
-package tests.API.lizi;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -8,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class VerifyLoginTest {
+public class VerifyLoginTest   extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {

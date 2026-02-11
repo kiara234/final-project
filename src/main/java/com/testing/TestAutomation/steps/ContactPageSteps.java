@@ -1,6 +1,6 @@
-package com.testing.TestAutomation.steps.lizi;
+package com.testing.TestAutomation.steps;
 
-import com.testing.TestAutomation.pages.lizi.Contact;
+import com.testing.TestAutomation.pages.Contact;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

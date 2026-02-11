@@ -1,6 +1,6 @@
-package com.testing.TestAutomation.steps.lizi;
+package com.testing.TestAutomation.steps;
 
-import com.testing.TestAutomation.pages.lizi.Logout;
+import com.testing.TestAutomation.pages.Logout;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 

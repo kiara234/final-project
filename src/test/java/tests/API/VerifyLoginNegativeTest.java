@@ -1,5 +1,6 @@
-package tests.API.mari;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class VerifyLoginNegativeTest {
+public class VerifyLoginNegativeTest  extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {

@@ -1,8 +1,8 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import com.testing.TestAutomation.steps.lika.LoginPageSteps;
+import com.testing.TestAutomation.steps.HomePageSteps;
+import com.testing.TestAutomation.steps.LoginPageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

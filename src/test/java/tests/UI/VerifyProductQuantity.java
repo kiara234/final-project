@@ -1,8 +1,8 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
-import com.testing.TestAutomation.steps.lika.LoginPageSteps;
+import com.testing.TestAutomation.steps.HomePageSteps;
+import com.testing.TestAutomation.steps.LoginPageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -42,10 +42,9 @@ public class VerifyProductQuantity extends BaseTest {
 
         loginPageSteps.login(mail, password);
 
-        Assert.assertTrue(
-                driver.findElement(By.xpath("//ul[@class='nav navbar-nav']"))
-                        .getText()
-                        .contains(username)
+        Assert.assertTrue(driver.findElement(By.xpath("//ul[@class='nav navbar-nav']"))
+                .getText()
+                .contains(username)
         );
     }
 
@@ -59,9 +58,6 @@ public class VerifyProductQuantity extends BaseTest {
                 .navigateToCart()
                 .waitForPageToLoad("https://automationexercise.com/view_cart", 10);
 
-        Assert.assertEquals(
-                driver.findElement(By.xpath("//td[@class='cart_quantity']")).getText(),
-                "2"
-        );
+        Assert.assertEquals(driver.findElement(By.xpath("//td[@class='cart_quantity']")).getText(), "2");
     }
 }

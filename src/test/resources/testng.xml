@@ -17,5 +17,20 @@
         </classes>
     </test>
 
+    <test name="API Tests">
+        <classes>
+            <class name="tests.API.BrandsListNegativeTest"/>
+            <class name="tests.API.GetBrandsListTest"/>
+            <class name="tests.API.GetProductsListTest"/>
+            <class name="tests.API.ProductsListTestNG"/>
+            <class name="tests.API.SearchProductNegativeTest"/>
+            <class name="tests.API.SearchProductTest"/>
+            <class name="tests.API.VerifyLoginAPITests"/>
+            <class name="tests.API.VerifyLoginNegativeTest"/>
+            <class name="tests.API.VerifyLoginTest"/>
+            <class name="tests.API.VerifyLoginUnsupportedMethodTest"/>
+        </classes>
+    </test>
+
 
 </suite>

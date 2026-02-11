@@ -1,8 +1,8 @@
 package tests.UI;
 
 import base.BaseTest;
-import com.testing.TestAutomation.pages.lika.HomePage;
-import com.testing.TestAutomation.steps.lika.HomePageSteps;
+import com.testing.TestAutomation.pages.HomePage;
+import com.testing.TestAutomation.steps.HomePageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -39,9 +39,6 @@ public class VerifyTestCases extends BaseTest {
                 .navigateToHomePage()
                 .navigateToTestCases();
 
-        Assert.assertEquals(
-                driver.getCurrentUrl(),
-                "https://automationexercise.com/test_cases"
-        );
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/test_case");
     }
 }

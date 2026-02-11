@@ -1,4 +1,4 @@
-package com.testing.TestAutomation.pages.mari;
+package com.testing.TestAutomation.pages;
 
 import org.openqa.selenium.By;
 

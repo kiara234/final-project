@@ -1,5 +1,6 @@
-package tests.API.lizi;
+package tests.API;
 
+import base.ApiBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.BeforeClass;
@@ -9,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SearchProductNegativeTest {
+public class SearchProductNegativeTest   extends ApiBaseTest {
 
     @BeforeClass
     public void setup() {
